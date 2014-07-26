@@ -82,16 +82,16 @@ To test the app, the following utility can be used to easily ping the local serv
 
 http://wst.mytechlabs.com/
 
-*WORKFLOW*
+**WORKFLOW**
 
 After a post request is made, we use the UID to query MongoDB and determine if the user exists. 
 
-*USER DOESN'T EXIST, FIRST TEXT TO PLATFORM
+**USER DOESN'T EXIST, FIRST TEXT TO PLATFORM**
 1) If the user doesn't exist, we can create a new user, set them at scene 1, and save that user to the database. 
 
 2) Then, on line 33 we check the stage of the user and respond with the appropriate text from the models/scenes.js data file. 
 
-*USER EXISTS*
+**USER EXISTS**
 
 1) If the user exists, we retrieve that user document from MongoDB. 
 
@@ -101,7 +101,7 @@ After a post request is made, we use the UID to query MongoDB and determine if t
 
 4) Using the models/scenes.js file, we then issue a response containing the text from that stage. 
 
-*ERROR HANDLING* 
+**ERROR HANDLING**
 
 1) If the user texts a message that doesn't correspond to any of the passwords of their particular stage, we resend that stage's message, along with a usage hint. 
 
@@ -109,7 +109,7 @@ After a post request is made, we use the UID to query MongoDB and determine if t
 
 3) Messages of any form of capitalization are accepted. 
 
-*FUTURE POSSIBILITIES*
+**FUTURE POSSIBILITIES**
 
 1) To improve the app in the future, we might consider implementing some form of predictive autocorrection / natural language processing library on the backend to match looser spellings of passwords. For instance, a message 'BOIZ' could register as the password 'BOYS'. 
 
