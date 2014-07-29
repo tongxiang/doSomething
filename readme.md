@@ -1,4 +1,4 @@
-Code Screen
+###OBJECTIVES
 
 Your task is to create an app that will handle the logic for the first few
 scenes of our Bully Text SMS game. The scenes from the story that you must
@@ -27,7 +27,7 @@ When complete, please send a link to the GitHub repository for your app.
 
 ---
 
-Scenes
+###SCENES
 
 *Scene 1:*
 You arrive at school and get ur schedule. AH! Gym first period! Head to the
@@ -78,11 +78,15 @@ shuts up about Sam. You finish GYM (text GYM) and go to your next class.
 Notes: 
 ---
 
-To test the app, the following utility can be used to easily ping the local server with requests.
+###GETTING STARTED
+
+To run the app, download (`git clone https://github.com/tongxiang/doSomething/`) the app. The app itself runs on Node.js--[download Node.js here](http://howtonode.org/how-to-install-nodejs). Enter the directory containing doSomething, and run `npm install` from your command line to install its dependencies. Because the app runs on Express 4.0, you can start a local version of the server by running the command `npm start` from the command line. 
+
+To test the app, the following utility can be used to easily ping the local server with requests. Make sure to direct the request at the local IP address of your server, not to localhost. 
 
 http://wst.mytechlabs.com/
 
-**WORKFLOW**
+###WORKFLOW 
 
 The majority of the app's logic is handled in `routes/index.js`. After a post request is made to our main route, we use the UID from the body of the reuest to query MongoDB and determine if the user exists. 
 
