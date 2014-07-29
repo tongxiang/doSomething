@@ -84,7 +84,7 @@ http://wst.mytechlabs.com/
 
 **WORKFLOW**
 
-After a post request is made, we use the UID to query MongoDB and determine if the user exists. 
+The majority of the app's logic is handled in `routes/index.js`. After a post request is made to our main route, we use the UID from the body of the reuest to query MongoDB and determine if the user exists. 
 
 **USER DOESN'T EXIST, FIRST TEXT TO PLATFORM**
 1) If the user doesn't exist, we can create a new user, set them at scene 1, and save that user to the database. 
